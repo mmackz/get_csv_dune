@@ -4,6 +4,7 @@ import "dotenv/config";
 
 const DUNE_TICKET_QUERY_ID = 3308995
 const DUNE_QUEST_QUERY_ID = 3318483
+const DUNE_XMAS_QUERY_ID = 3318698
 
 const cache = {};
 
@@ -38,8 +39,9 @@ export async function getAllowlistFromDune(query, filename, limit) {
 }
 
 (async () => {
-  await getAllowlistFromDune(DUNE_QUEST_QUERY_ID, "questExplore.csv");
-  await getAllowlistFromDune(DUNE_QUEST_QUERY_ID, "questAdept.csv", 100);
-  await getAllowlistFromDune(DUNE_QUEST_QUERY_ID, "questMaster.csv", 500);
-  await getAllowlistFromDune(DUNE_TICKET_QUERY_ID, "ticketMaster.csv");
+  // await getAllowlistFromDune(DUNE_QUEST_QUERY_ID, "questExplore.csv");
+  // await getAllowlistFromDune(DUNE_QUEST_QUERY_ID, "questAdept.csv", 100);
+  // await getAllowlistFromDune(DUNE_QUEST_QUERY_ID, "questMaster.csv", 500);
+  // await getAllowlistFromDune(DUNE_TICKET_QUERY_ID, "ticketMaster.csv");
+  await getAllowlistFromDune(DUNE_XMAS_QUERY_ID, "xmasTicketMinters.csv");
 })();
